@@ -1,0 +1,187 @@
+.detail-page {
+  min-height: 100vh;
+  background: white;
+  padding: 40px;
+}
+
+.detail-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  color: #015060;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 8px 0;
+  margin-bottom: 24px;
+  transition: color 0.2s;
+}
+
+.back-btn:hover {
+  color: #013844;
+}
+
+.station-title {
+  font-size: 32px;
+  color: #015060;
+  margin-bottom: 4px;
+}
+
+.station-code {
+  color: #999;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  margin-bottom: 32px;
+}
+
+.loading {
+  text-align: center;
+  padding: 60px;
+  color: #666;
+}
+
+.error-banner {
+  background: #FEE;
+  color: #C00;
+  padding: 16px;
+  border-radius: 8px;
+  margin-top: 16px;
+}
+
+.section-title {
+  font-size: 18px;
+  color: #015060;
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+
+.info-section {
+  margin-bottom: 40px;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  background: #f9f9f9;
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.info-item.full-width {
+  grid-column: span 2;
+}
+
+.info-label {
+  font-size: 12px;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+
+.info-value {
+  font-size: 16px;
+  color: #333;
+}
+
+.badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 600;
+  width: fit-content;
+}
+
+.badge-ouverte {
+  background: #DFFFDF;
+  color: #186818;
+}
+
+.badge-fermee {
+  background: #FFDFDF;
+  color: #C00;
+}
+
+.badge-maintenance {
+  background: #FFF3CD;
+  color: #856404;
+}
+
+.visibility-section {
+  margin-bottom: 40px;
+}
+
+.visibility-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f9f9f9;
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.visibility-info {
+  flex: 1;
+}
+
+.status-indicator {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.status-indicator.visible {
+  color: #186818;
+}
+
+.status-indicator.hidden {
+  color: #C00;
+}
+
+.visibility-description {
+  color: #666;
+  font-size: 14px;
+}
+
+.toggle-btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  color: white;
+  transition: background 0.2s;
+}
+
+.toggle-btn:disabled {
+  background: #aaa;
+  cursor: not-allowed;
+}
+
+.toggle-show {
+  background: #015060;
+}
+
+.toggle-show:hover:not(:disabled) {
+  background: #013844;
+}
+
+.toggle-hide {
+  background: #EE7656;
+}
+
+.toggle-hide:hover:not(:disabled) {
+  background: #D9624A;
+}

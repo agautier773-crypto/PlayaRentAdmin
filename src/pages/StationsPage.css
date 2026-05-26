@@ -1,0 +1,143 @@
+.stations-page {
+  min-height: 100vh;
+  background: white;
+  padding: 40px 60px;
+}
+
+.stations-content {
+  max-width: none;
+  margin: 0;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.logo {
+  width: 240px;
+  height: auto;
+}
+
+.page-title {
+  text-align: center;
+  font-size: 28px;
+  color: #015060;
+  margin-bottom: 32px;
+  font-weight: 600;
+}
+
+.error-banner {
+  background: #FEE;
+  color: #C00;
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.loading {
+  text-align: center;
+  padding: 40px;
+  color: #666;
+}
+
+.stations-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 64px;
+}
+
+.stations-table th {
+  text-align: center;
+  padding: 12px 16px;
+  font-weight: 600;
+  color: #666;
+  font-size: 14px;
+  border-bottom: 1px solid #eee;
+}
+
+.stations-table th:first-child {
+  text-align: left;
+}
+
+.stations-table td {
+  padding: 16px;
+  border-bottom: 1px solid #f5f5f5;
+  font-size: 14px;
+}
+
+.stations-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.station-id {
+  font-weight: 600;
+  color: #015060;
+}
+
+.centered {
+  text-align: center;
+}
+
+.icon-yes {
+  color: #2E7D32;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.icon-no {
+  color: #C62828;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.edit-btn {
+  background: #EE7656;
+  color: white;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.edit-btn:hover {
+  background: #D9624A;
+}
+
+.create-btn {
+  width: 100%;
+  background: #015060;
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-bottom: 20px;
+}
+
+.create-btn:hover {
+  background: #013844;
+}
+
+.logout-link {
+  display: block;
+  margin: 0 auto;
+  background: none;
+  border: none;
+  color: #999;
+  cursor: pointer;
+  font-size: 13px;
+  text-decoration: underline;
+}
+
+.logout-link:hover {
+  color: #015060;
+}

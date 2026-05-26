@@ -2,6 +2,8 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import LoginPage from './pages/LoginPage';
 import StationsPage from './pages/StationPage';
 import { isLoggedIn } from './services/AuthService';
+import StationDetailPage from './pages/StationDetailPage';
+import StationCreatePage from './pages/StationCreatePage';
 
 // Composant pour protéger une route : redirige vers /login si pas connecté
 function ProtectedRoute({ children }: { children: React.ReactNode }) {
@@ -21,6 +23,22 @@ function App() {
           element={
             <ProtectedRoute>
               <StationsPage />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/stations/new"
+          element={
+            <ProtectedRoute>
+              <StationCreatePage />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/stations/:id"
+          element={
+            <ProtectedRoute>
+              <StationDetailPage />
             </ProtectedRoute>
           }
         />
