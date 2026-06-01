@@ -23,8 +23,9 @@ export async function login(credentials: LoginRequest): Promise<User> {
     throw new Error("Accès refusé : vous n'êtes pas administrateur");
   }
 
-  // Stocke le token et les infos utilisateur
-  localStorage.setItem(STORAGE_KEYS.JWT_TOKEN, data.token);
+  localStorage.setItem(STORAGE_KEYS.JWT_TOKEN, data.accessToken);        
+  localStorage.setItem(STORAGE_KEYS.REFRESH_TOKEN, data.refreshToken);
+
   const user: User = {
     userId: data.userId,
     mail: data.mail,
@@ -64,7 +65,24 @@ export function isLoggedIn(): boolean {
 /**
  * Déconnecte l'utilisateur (vide le localStorage).
  */
-export function logout(): void {
+export async function logout(): Promise<void> {
+  const refreshToken = localStorage.getItem(STORAGE_KEYS.REFRESH_TOKEN);
+
+  // Tente de révoquer côté serveur (sans bloquer si échec)
+  if (refreshToken) {
+    try {
+      await fetch(`${API_BASE_URL}${ROUTES.LOGOUT}`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ refreshToken }),
+      });
+    } catch (error) {
+      console.warn('Échec révocation refresh token côté serveur', error);
+    }
+  }
+
+  // Nettoie le localStorage (toujours)
   localStorage.removeItem(STORAGE_KEYS.JWT_TOKEN);
+  localStorage.removeItem(STORAGE_KEYS.REFRESH_TOKEN);
   localStorage.removeItem(STORAGE_KEYS.USER_INFO);
 }

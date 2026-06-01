@@ -33,10 +33,6 @@ export default function StationsPage() {
     navigate(`/stations/${stationId}`);
   };
 
-  const handleCreate = () => {
-    navigate('/stations/new');
-  };
-
   const handleLogout = () => {
     logout();
     navigate('/login');
@@ -96,10 +92,6 @@ export default function StationsPage() {
             </tbody>
           </table>
         )}
-
-        <button className="create-btn" onClick={handleCreate}>
-          Créer une nouvelle station manuellement
-        </button>
 
         <button className="logout-link" onClick={handleLogout}>
           Se déconnecter
