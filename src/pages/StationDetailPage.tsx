@@ -81,27 +81,22 @@ export default function StationDetailPage() {
           <h2 className="section-title">Informations</h2>
           <div className="info-grid">
             <div className="info-item">
-              <span className="info-label">État</span>
+              <span className="info-title">État</span>
               <span className={`badge badge-${station.etat.toLowerCase()}`}>
                 {station.etat}
               </span>
             </div>
             <div className="info-item">
-              <span className="info-label">Composants</span>
-              <span className="info-label">{station.typeComposants}</span>
-              
-            </div>
-            <div className="info-item full-width">
-              <span className="info-label">Adresse</span>
-              <span className="info-value">{station.adresse}</span>
+              <span className="info-title">Composants</span>
+              <span className="info-label">{station.typeComposant}</span>
             </div>
             <div className="info-item">
-              <span className="info-label">Latitude</span>
-              <span className="info-value">{station.latitude}</span>
+              <span className="info-title">Latitude</span>
+              <span className="info-label">{station.latitude}</span>
             </div>
             <div className="info-item">
-              <span className="info-label">Longitude</span>
-              <span className="info-value">{station.longitude}</span>
+              <span className="info-title">Longitude</span>
+              <span className="info-label">{station.longitude}</span>
             </div>
           </div>
         </div>

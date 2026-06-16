@@ -141,3 +141,85 @@
 .logout-link:hover {
   color: #015060;
 }
+/* Barre de filtres */
+.filtres-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    align-items: flex-end;
+    margin-bottom: 20px;
+    padding: 16px;
+    background-color: #F8F9FA;
+    border-radius: 8px;
+    border: 1px solid #E0E0E0;
+}
+
+.filtre-group {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex: 1;
+    min-width: 200px;
+}
+
+.filtre-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: #555;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.filtre-input,
+.filtre-select {
+    padding: 8px 12px;
+    border: 1px solid #CCC;
+    border-radius: 6px;
+    font-size: 14px;
+    background-color: #FFFFFF;
+    color: #333;
+    transition: border-color 0.2s;
+}
+
+.filtre-input:focus,
+.filtre-select:focus {
+    outline: none;
+    border-color: #1A4D5C;
+    box-shadow: 0 0 0 2px rgba(26, 77, 92, 0.1);
+}
+
+.filtre-reset-btn {
+    padding: 8px 16px;
+    background-color: #FFFFFF;
+    color: #1A4D5C;
+    border: 1px solid #1A4D5C;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.filtre-reset-btn:hover {
+    background-color: #1A4D5C;
+    color: #FFFFFF;
+}
+
+/* Compteur de résultats */
+.resultats-count {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 12px;
+    font-style: italic;
+}
+
+/* Empty state */
+.empty-state {
+    padding: 40px 20px;
+    text-align: center;
+    color: #888;
+    font-style: italic;
+    background-color: #F8F9FA;
+    border-radius: 8px;
+    border: 1px dashed #DDD;
+}

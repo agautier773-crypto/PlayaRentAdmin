@@ -4,8 +4,20 @@ export type Station = {
     etat: string;
     latitude: number;
     longitude: number;
-    nombreComposants: number;
-    typeComposants: string;
+    nombreComposantsTotal: number;
+    nombreComposantsDisponibles : number;
+    typeComposant: string;
     adresse: string;
     estVisible: boolean;
+    composants?: Equipement[];
 }
+
+export type Equipement = {
+    id: string;
+    idStation: string;
+    type: string;
+    nom: string;
+    disponible: boolean;
+    informations?: { contenu: string } | null;
+    heureRetour?: string | null;
+};
