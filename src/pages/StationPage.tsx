@@ -60,6 +60,20 @@ export default function StationsPage() {
                 <div className="logo-container">
                     <img src="/logo.png" alt="Playa-Rent" className="logo" />
                 </div>
+                    <div className="admin-nav">
+                    <button
+                        className="nav-link active"
+                        onClick={() => navigate('/stations')}
+                    >
+                        Stations
+                    </button>
+                    <button
+                        className="nav-link"
+                        onClick={() => navigate('/groupes')}
+                    >
+                        Groupes
+                    </button>
+                </div>
 
                 <h1 className="page-title">Liste des Stations</h1>
 

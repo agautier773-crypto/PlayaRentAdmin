@@ -6,6 +6,7 @@ import { isLoggedIn } from './services/AuthService';
 import { setOnSessionExpired } from './services/fetchWithAuth';
 import StationDetailPage from './pages/StationDetailPage';
 import StationCreatePage from './pages/StationCreatePage';
+import GroupesPage from './pages/GroupesPage'; 
 
 // Composant pour protéger une route : redirige vers /login si pas connecté
 function ProtectedRoute({ children }: { children: React.ReactNode }) {
@@ -53,6 +54,14 @@ function AppRoutes() {
           </ProtectedRoute>
         }
       />
+        <Route
+        path="/groupes"
+        element={
+          <ProtectedRoute>
+            <GroupesPage />
+          </ProtectedRoute>
+        }
+            />
       {/* Route par défaut : redirige vers /stations (qui redirigera vers /login si pas connecté) */}
       <Route path="*" element={<Navigate to="/stations" replace />} />
     </Routes>

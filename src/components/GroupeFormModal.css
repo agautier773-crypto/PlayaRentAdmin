@@ -1,0 +1,104 @@
+.modal-overlay {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    padding: 24px;
+    width: 90%;
+    max-width: 500px;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+}
+
+.modal-content h2 {
+    color: #1A4D5C;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 16px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #CCC;
+    border-radius: 6px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #1A4D5C;
+}
+
+.stations-list {
+    max-height: 250px;
+    overflow-y: auto;
+    border: 1px solid #E0E0E0;
+    border-radius: 6px;
+    padding: 8px;
+}
+
+.station-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px;
+    cursor: pointer;
+}
+
+.station-item:hover { background-color: #F5F5F5; }
+.station-item input { margin: 0; }
+.station-gps {
+    font-size: 11px;
+    color: #888;
+    margin-left: auto;
+}
+
+.modal-actions {
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.btn-cancel {
+    padding: 8px 20px;
+    background-color: #FFFFFF;
+    color: #666;
+    border: 1px solid #CCC;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.btn-save {
+    padding: 8px 20px;
+    background-color: #1A4D5C;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+}
+.btn-save:disabled { opacity: 0.5; cursor: not-allowed; }
