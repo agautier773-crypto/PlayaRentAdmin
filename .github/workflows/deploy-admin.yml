@@ -33,4 +33,4 @@ jobs:
           source: "dist/*"
           target: "/var/www/admin/"
           strip_components: 1
-          rm: true
+          
