@@ -1,0 +1,36 @@
+name: Deploy Admin
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    name: Build et déploiement admin
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout du code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Installer les dépendances
+        run: npm ci
+
+      - name: Build de l'admin
+        run: npm run build
+
+      - name: Copie du dist vers le VPS
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USER }}
+          key: ${{ secrets.VPS_SSH_KEY }}
+          source: "dist/*"
+          target: "/var/www/admin/"
+          strip_components: 1
+          rm: true

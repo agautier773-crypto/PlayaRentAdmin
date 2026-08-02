@@ -1,6 +1,9 @@
 // Config global de l'app admin 
 
-export const API_BASE_URL = 'http://localhost:8080/api';
+const DEV_API_URL = 'http://localhost:8080/api';
+const PROD_API_URL = 'https://api.playa-rent.fr/api';
+
+export const API_BASE_URL = import.meta.env.PROD ? PROD_API_URL : DEV_API_URL;
 
 // Routes de l'API
 export const ROUTES = {
